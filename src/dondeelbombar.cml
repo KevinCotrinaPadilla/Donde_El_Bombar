@@ -1,0 +1,22 @@
+ContextMap DondeElBombar{
+    contains GestionVentasContext
+    contains GestionReservasContext
+    contains GestionCajaContext
+    contains GestionReclamosContext
+    contains GestionUsuariosContext
+    contains GestionMenuContext
+
+    GestionVentasContext [SK]<->[SK] GestionCajaContext
+    GestionVentasContext [U,S]->[D,C] GestionReclamosContext
+    GestionVentasContext [D,CF]<-[U,OHS,PL] GestionUsuariosContext
+    GestionVentasContext [P]<->[P] GestionReservasContext
+    GestionReservasContext [D,ACL]<-[U,OHS,PL] GestionUsuariosContext 
+    GestionUsuariosContext [P]<->[P] GestionMenuContext
+}
+    BoundedContext GestionVentasContext{}
+    BoundedContext GestionReservasContext{}
+    BoundedContext GestionCajaContext{}
+    BoundedContext GestionReclamosContext{}
+    BoundedContext GestionUsuariosContext{}
+    BoundedContext GestionMenuContext{}
+

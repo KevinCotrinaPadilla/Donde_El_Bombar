@@ -1,0 +1,27 @@
+digraph "ContextMapGraph" {
+graph ["imagepath"="/tmp/GraphvizJava"]
+"GestionCajaContext" ["margin"="0.3","orientation"="232","shape"="egg","fontsize"="16","style"="bold","label"="GestionCajaContext\n","fontname"="sans-serif"]
+"GestionMenuContext" ["margin"="0.3","orientation"="181","shape"="egg","fontsize"="16","style"="bold","label"="GestionMenuContext\n","fontname"="sans-serif"]
+"GestionReclamosContext" ["margin"="0.3","orientation"="13","shape"="egg","fontsize"="16","style"="bold","label"="GestionReclamosContext\n","fontname"="sans-serif"]
+"GestionReservasContext" ["margin"="0.3","orientation"="185","shape"="egg","fontsize"="16","style"="bold","label"="GestionReservasContext\n","fontname"="sans-serif"]
+"GestionUsuariosContext" ["margin"="0.3","orientation"="133","shape"="egg","fontsize"="16","style"="bold","label"="GestionUsuariosContext\n","fontname"="sans-serif"]
+"GestionVentasContext" ["margin"="0.3","orientation"="107","shape"="egg","fontsize"="16","style"="bold","label"="GestionVentasContext\n","fontname"="sans-serif"]
+"GestionUsuariosContext" -> "GestionMenuContext" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+"GestionUsuariosContext" -> "GestionVentasContext" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>CF</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">U</td><td sides="trbl" bgcolor="white"><font>OHS, PL</font></td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"GestionUsuariosContext" -> "GestionReservasContext" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>ACL</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">U</td><td sides="trbl" bgcolor="white"><font>OHS, PL</font></td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"GestionVentasContext" -> "GestionCajaContext" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+"GestionVentasContext" -> "GestionReclamosContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="Customer/Supplier","dir"="none","fontname"="sans-serif"]
+"GestionVentasContext" -> "GestionReservasContext" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+}
